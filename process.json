@@ -1,0 +1,13 @@
+{
+    "apps": [
+        {
+            "name": "service",
+            "env": {
+                "NODE_ENV": "production",
+                "NODE_APP_INSTANCE": ""
+            },
+            "script": "babel-node",
+            "args": "app.js"
+        }
+    ]
+}

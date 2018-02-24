@@ -1,0 +1,61 @@
+{
+    "Server": {
+        "port": 3000
+    },
+    "JwtAuth": "http://127.0.0.1:6010/v1.0",
+    "Database": {
+        "mysql": {
+            "protocol": "mysql",
+            "host": "192.168.1.157",
+            "port": 3306,
+            "username": "dba",
+            "password": "hujunming0209",
+            "database": "watermanage"
+        }
+    },
+    "Logger": {
+        "appenders": {
+            "logic": {
+                "maxLogSize": 1024,
+                "alwaysIncludePattern": true,
+                "pattern": "-yyyy-MM-dd.log",
+                "type": "dateFile",
+                "filename": "runtime/logs/logic/logic"
+            },
+            "koa": {
+                "maxLogSize": 1024,
+                "alwaysIncludePattern": true,
+                "pattern": "-yyyy-MM-dd.log",
+                "type": "dateFile",
+                "filename": "runtime/logs/koa/koa"
+            }
+        },
+        "categories": {
+            "default": {
+                "appenders": [
+                    "logic"
+                ],
+                "level": "info"
+            },
+            "koa": {
+                "appenders": [
+                    "koa"
+                ],
+                "level": "info"
+            }
+        }
+    },
+    "Qiniu": {
+        "bucket": "bileji",
+        "key": {
+            "access": "2ajU0NKLYFwS26j8T-bwGvUmfrLdJWHIGchdH4Xt",
+            "secret": "j-Vex2BSRS5-QXauP4aad024Smdgzh7CkGk4uJQ_"
+        }
+    },
+    "Sms": {
+        "Ali^2": {
+            "access": "FmusNu6zirrizgDe",
+            "secret": "nn7fETcdYUXoSAxbLieErrgRb1vbWm"
+        }
+    }
+}
